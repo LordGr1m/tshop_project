@@ -1,5 +1,3 @@
-
-
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -24,20 +22,21 @@
   </div>
 
   <div class="field">
-    <%= form.label :password_confirmation %>
+    <%= form.label "Confirm Password" %>
     <%= form.password_field :password_confirmation %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label "Full Name" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.select :role, options_for_select([["Select One", ""], 'Agent', 'CS']) %>
+    <%= form.select :role, options_for_select([["Choose role", ""], 'Agent', 'CS']) %>
   </div>
 
+  </br>
   <div class="field">
     <%= form.hidden_field :status, :value => "active"%>
   </div>
@@ -45,6 +44,6 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>
-
-
