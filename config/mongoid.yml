@@ -1,3 +1,15 @@
+production:
+  clients:
+    default:
+      database: tshop_production
+      hosts:
+        - localhost:27017
+
+      options:
+
+  options:
+    raise_not_found_error: false
+
 development:
   # Configure available database clients. (required)
   clients:
