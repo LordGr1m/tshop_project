@@ -1,3 +1,5 @@
+<% if current_user && current_user.try(:role) == "Admin" %>
+
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -33,15 +35,23 @@
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.select :role, options_for_select([["Select One", ""], 'Agent', 'CS', 'Admin' ]) %>
+    <%= form.select :role, options_for_select([["Select One", ""], 'Agent', 'CS']) %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
     <%= form.hidden_field :status, :value => "active"%>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
+
+
+<% else %>
+
+  <script type="text/javascript">
+      window.location.href="/"  // put your correct path in a string here
+  </script>
+
 <% end %>
