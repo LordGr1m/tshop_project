@@ -86,10 +86,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :user_name            => ENV['gmail_username'],
-      :password             => ENV['gmail_password'],
-      :authentication       => "plain",
-      :enable_starttls_auto => true
+      :user_name            => "laoag.edmhar@gmail.com",
+      :password             => "123698745a",
+      :authentication       => :plain,
+      :openssl_verify_mode  => 'none'
   }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
