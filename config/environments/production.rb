@@ -79,6 +79,7 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+  config.action_mailer.perform_deliveries = true
 
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
