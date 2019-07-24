@@ -15,4 +15,5 @@ class ApplicationController < ActionController::Base
     @current_list ||= User.all.to_a
   end
 
+
 end

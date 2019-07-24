@@ -15,8 +15,12 @@
 
 
 <% else %>
-  <%= link_to 'Sign Up', signup_path %> or
-  <%= link_to 'Log In', login_path %>
+
+  <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+  </script>
+
 <% end %>
+
 
 <p id=”notice”><%= notice %></p>
