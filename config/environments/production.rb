@@ -84,12 +84,14 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :user_name            => "laoag.edmhar@gmail.com",
-      :password             => "123698745a",
-      :authentication       => :plain,
-      :openssl_verify_mode  => 'none'
+      address:               'smtp.gmail.com',
+      port:                  587,
+      domain:                'gmail.com',
+      user_name:             'laoag.edmhar@gmail.com',
+      password:              'owjsdbfaxmxcmynx',
+      authentication:        'plain',
+      enable_starttls_auto:  true
+
   }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
