@@ -3,6 +3,9 @@ class User
   include ActiveModel::SecurePassword
 
   field :email, type: String
+  validates :email, uniqueness: true
+
+
   field :name, type: String
   field :role, type: String
   field :status, type: String
