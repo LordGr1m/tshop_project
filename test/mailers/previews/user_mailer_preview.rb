@@ -2,7 +2,7 @@
 class UserMailerPreview < ActionMailer::Preview
 
     def sample_mail_preview
-      UserMailer.mailer(User.first)
+      UserMailer.mailer(User.last)
     end
 
 end

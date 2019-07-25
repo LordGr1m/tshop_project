@@ -8,14 +8,17 @@
 <p>
 
   Thank you for registering to the new teleshopping portal. Your registration has been received.
-</br>
-  You registered with this email as your username: <%= @user.email %>
-</br>
+</p>
+  You registered with this email as your username: <b><%= @user.email %></b>
+<p>
 
-  If you would like to view your registration details, you can login at the following link:
+  If you would like to view your registration details, you can login at the following link:<br><br>
 
-  https://52.14.18.193/
-  
+  http://52.14.18.193/
+  <br><br>
+
+   Date Created: <i><%= @user.created_at %></i>
+
 
 </p>
 </body>

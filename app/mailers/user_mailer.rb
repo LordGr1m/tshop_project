@@ -4,6 +4,6 @@ class UserMailer < ActionMailer::Base
 
   def mailer(user)
     @user = user
-    mail(to: @user.email, subject: 'Sample Email')
+    mail(to: @user.email, subject: "Registration complete - #{@user.name}")
   end
 end
