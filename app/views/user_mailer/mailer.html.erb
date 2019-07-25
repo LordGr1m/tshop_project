@@ -4,9 +4,19 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-<h1>Hi <%= @user.name %></h1>
+<h1>Dear <%= @user.name %></h1>
 <p>
-  Sample mail sent using smtp.
+
+  Thank you for registering to the new teleshopping portal. Your registration has been received.
+</br>
+  You registered with this email as your username: <%= @user.email %>
+</br>
+
+  If you would like to view your registration details, you can login at the following link:
+
+  https://52.14.18.193/
+  
+
 </p>
 </body>
 </html>
